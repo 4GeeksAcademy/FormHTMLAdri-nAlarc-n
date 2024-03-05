@@ -23,41 +23,41 @@
                     Some fields are missing
                 </div>
             </div>
-            <form class="row ps-3 pe-3">
+            <form class="row ps-3 pe-3 mt-1 needs-validation">
                 <!--Primera linea de form-->
                 <div class="col-md-5">
                     <label for="inputCard" class="form-label fw-semibold">Card #</label>
-                    <input type="text" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXXXXX">
+                    <input type="number" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXXXXX" required min="0" max="9999999999999999">
                 </div>
                 <div class="col-md-3">
                     <label for="inputCVC" class="form-label fw-semibold">CVC #</label>
-                    <input type="text" class="form-control" id="inputCVC" placeholder="0000">
+                    <input type="number" class="form-control" id="inputCVC" placeholder="000" required min="0" max="999">
                 </div>
                 <div class="col-md-4">
                     <label for="inputAmount" class="form-label fw-semibold">Amount</label>
                     <div class="input-group mb-3">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control" id="inputAmount" placeholder="Amount">
+                        <input type="number" class="form-control" id="inputAmount" placeholder="Amount" required>
                     </div>
                 </div>
                 <!--Segunda linea de form-->
                 <div class="col-md-6 mb-3">
                     <label for="inputFirstName" class="form-label fw-semibold">First Name</label>
-                    <input type="text" class="form-control" id="inputFirstName">
+                    <input type="text" class="form-control" id="inputFirstName" required>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="inputLastName" class="form-label fw-semibold">Last Name</label>
-                    <input type="text" class="form-control" id="inputLastName">
+                    <input type="text" class="form-control" id="inputLastName" required>
                 </div>
                 <!--Tercera linea de form-->
                 <div class="col-md-6 mb-3">
                     <label for="inputCity" class="form-label fw-semibold">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" class="form-control" id="inputCity" required>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="inputState" class="form-label fw-semibold">State</label>
-                    <select type="text" class="form-select" id="inputState" aria-label="Pick a State">
-                        <option selected>Pick a State</option>
+                    <select type="text" class="form-select" id="inputState" aria-label="Pick a State" required>
+                        <option selected disabled value="">Pick a State</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -65,47 +65,47 @@
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="inputPostalCode" class="form-label fw-semibold">Postal Code</label>
-                    <input type="text" class="form-control" id="inputPostalCode">
+                    <input type="text" class="form-control" id="inputPostalCode" placeholder="00000" required min="0" max="99999">
                 </div>
                 <!--Cuarta linea de form-->
                 <div class="col-md-6 mb-3">
                     <label for="inlineRadio1" class="form-label fw-semibold">We accept:</label><br>
-
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
+                            value="option1" required>
                         <label class="form-check-label" for="inlineRadio1"><i
                                 class="fa-brands fa-cc-mastercard"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
+                            value="option2" required>
                         <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                            value="option3">
+                            value="option3" required>
                         <label class="form-check-label" for="inlineRadio3"><i
                                 class="fa-brands fa-cc-paypal"></i></label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
-                            value="option4">
+                            value="option4" required>
                         <label class="form-check-label" for="inlineRadio4"><i
                                 class="fa-brands fa-cc-apple-pay"></i></label>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label for="inputArea" class="form-label">Message</label>
-                    <textarea class="form-control" id="inputArea" rows="3"></textarea>
+                    <textarea class="form-control" id="inputArea" rows="3" required></textarea>
                     <p class="fs-6 text-secondary mt-1">Add any notes here.</p>
                 </div>
+
+                <!--Card footer-->
+                <div class="card-footer">
+                    <button class="float-end btn btn-primary ms-1 fw-semibold" type="submit">Send</button>
+                    <button class="float-end btn btn-secondary fw-semibold" type="button">Cancel</button>
+                </div>
             </form>
-            <!--Card footer-->
-            <div class="card-footer pt-3 pb-3">
-                <button class="float-end btn btn-primary ms-1 fw-semibold" type="button">Send</button>
-                <button class="float-end btn btn-secondary fw-semibold" type="button">Cancel</button>
-            </div>
         </div>
 
     </div>
