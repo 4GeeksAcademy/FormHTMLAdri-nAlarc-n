@@ -25,36 +25,40 @@
             </div>
             <form class="row ps-3 pe-3 mt-1 needs-validation">
                 <!--Primera linea de form-->
-                <div class="col-md-5">
+                <div class="col-sm-5">
                     <label for="inputCard" class="form-label fw-semibold">Card #</label>
-                    <input type="number" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXXXXX" required min="0" max="9999999999999999">
+                    <input type="text" class="form-control" id="inputCard" placeholder="XXXXXXXXXXXXXXXX"
+                        pattern="\d{16}" required  maxlength="16">
+
+
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-3">
                     <label for="inputCVC" class="form-label fw-semibold">CVC #</label>
-                    <input type="number" class="form-control" id="inputCVC" placeholder="000" required min="0" max="999">
+                    <input type="text" class="form-control" id="inputCVC" placeholder="000" pattern="\d{3}" required maxlength="3">
+
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <label for="inputAmount" class="form-label fw-semibold">Amount</label>
                     <div class="input-group mb-3">
                         <span class="input-group-text">$</span>
-                        <input type="number" class="form-control" id="inputAmount" placeholder="Amount" required>
+                        <input type="text" class="form-control" id="inputAmount" placeholder="Amount" pattern="^\d+(\.\d{1,2})?$" required>
                     </div>
                 </div>
                 <!--Segunda linea de form-->
-                <div class="col-md-6 mb-3">
+                <div class="col-sm-6 mb-3">
                     <label for="inputFirstName" class="form-label fw-semibold">First Name</label>
                     <input type="text" class="form-control" id="inputFirstName" required>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-sm-6 mb-3">
                     <label for="inputLastName" class="form-label fw-semibold">Last Name</label>
                     <input type="text" class="form-control" id="inputLastName" required>
                 </div>
                 <!--Tercera linea de form-->
-                <div class="col-md-6 mb-3">
+                <div class="col-sm-6 mb-3">
                     <label for="inputCity" class="form-label fw-semibold">City</label>
                     <input type="text" class="form-control" id="inputCity" required>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-sm-3 mb-3">
                     <label for="inputState" class="form-label fw-semibold">State</label>
                     <select type="text" class="form-select" id="inputState" aria-label="Pick a State" required>
                         <option selected disabled value="">Pick a State</option>
@@ -63,12 +67,13 @@
                         <option value="3">Three</option>
                     </select>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-sm-3 mb-3">
                     <label for="inputPostalCode" class="form-label fw-semibold">Postal Code</label>
-                    <input type="text" class="form-control" id="inputPostalCode" placeholder="00000" required min="0" max="99999">
+                    <input type="text" class="form-control" id="inputPostalCode" placeholder="00000" pattern="\d{5}" required maxlength="5">
+
                 </div>
                 <!--Cuarta linea de form-->
-                <div class="col-md-6 mb-3">
+                <div class="col-sm-6 mb-3">
                     <label for="inlineRadio1" class="form-label fw-semibold">We accept:</label><br>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
@@ -96,7 +101,7 @@
                 </div>
                 <div class="col-md-6">
                     <label for="inputArea" class="form-label">Message</label>
-                    <textarea class="form-control" id="inputArea" rows="3" required></textarea>
+                    <textarea class="form-control" id="inputArea" rows="3"></textarea>
                     <p class="fs-6 text-secondary mt-1">Add any notes here.</p>
                 </div>
 
